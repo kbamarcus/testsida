@@ -145,3 +145,42 @@ footer {
         flex-direction: column;
     }
 }
+
+
+
+/* Ändra eller lägg till detta i din befintliga CSS */
+
+.content-wrapper {
+    display: flex;
+    align-items: center;    /* Centrerar knappar och bild i höjdled */
+    justify-content: center; /* Håller allt centrerat i mitten av sidan */
+    gap: 40px;              /* Avståndet mellan knapparna och bilden */
+    margin-top: 30px;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;           /* Ger knappkolumnen en fast bredd */
+}
+
+.soccer-img {
+    width: 200px;           /* Här styr du bildens storlek */
+    height: auto;           /* Behåller bildens proportioner */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* För mobiler: stapla dem på höjden och gör bilden lite mindre */
+@media (max-width: 600px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .soccer-img {
+        width: 150px;
+    }
+}
