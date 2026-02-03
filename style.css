@@ -72,3 +72,38 @@ footer {
         gap: 10px;
     }
 }
+
+.link-container {
+    display: flex;
+    flex-direction: column; /* Lägger länkarna under varandra */
+    align-items: center;    /* Centrerar dem vågrätt */
+    gap: 15px;              /* Avstånd mellan länkarna */
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+    width: 100%;            /* Gör knappen bred på mobilen */
+    max-width: 250px;       /* Begränsar bredden på datorn */
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Liten "lyft"-effekt vid hovring */
+}
+
+.button.secondary {
+    background-color: #27ae60; /* Grön färg för VM-länken */
+}
+
+.button.secondary:hover {
+    background-color: #219150;
+}
