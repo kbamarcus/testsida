@@ -107,3 +107,41 @@ footer {
 .button.secondary:hover {
     background-color: #219150;
 }
+
+/* Behållare för både länkar och bild */
+.content-wrapper {
+    display: flex;
+    align-items: center;    /* Centrerar elementen vertikalt */
+    justify-content: space-around; /* Ger luft mellan länkarna och bilden */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Ser till att länkarna ligger under varandra i sin kolumn */
+.link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1; /* Tar upp hälften av utrymmet */
+}
+
+/* Styling för bilden */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.soccer-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsivitet: På små skärmar hamnar bilden under länkarna */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+}
